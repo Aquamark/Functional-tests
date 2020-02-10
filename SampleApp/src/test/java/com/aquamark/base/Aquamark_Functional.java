@@ -28,6 +28,7 @@ public abstract class Aquamark_Functional {
 			System.out.println(IMAGE_PATH+" - "+APPIUM_PORT);
 			DesiredCapabilities capabilities = new DesiredCapabilities();
 			capabilities.setCapability("autoGrantPermissions", true);
+			capabilities.setCapability("androidInstallTimeout",600000);
 			driver = new AndroidDriver<MobileElement>(new URL(getUrl()),capabilities);
 			System.out.println(driver);
 			return driver;
