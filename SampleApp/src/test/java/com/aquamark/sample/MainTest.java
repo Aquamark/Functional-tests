@@ -194,7 +194,7 @@ public class MainTest extends Aquamark_Functional {
 	@AfterClass
 	public void cleanUp() {
 		try {
-			androidDriver.quit();
+			closeDriver();
 			logger.info("driver closed successfully");
 		} catch (Exception e) {
 			logger.error("Error in cleanUp()", e);
